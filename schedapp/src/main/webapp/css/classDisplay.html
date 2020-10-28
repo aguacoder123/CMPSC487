@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{'css/main.css'}">
+</head>
+<body>
+<div class="navbar">
+    <a href="/">Home</a>
+    <a href="/classDisplay">Courses</a>
+    <a href="/scheduleDisplay">Schedule</a>
+</div>
+<div class="searcher">
+    <form>
+        <input type="text" class="searcher" size="21" maxlength="120"><input type="submit" value="search" class="searchbutton">
+    </form>
+</div>
+<h1> </h1>
+<h1> </h1>
+<div>
+<section id="coursedisplayer">
+    <center>
+        <table th:unless="${courses.size() eq 0}">
+            <thead>
+            <tr>
+                <th scope="col"><a th:href="@{/sort(param1=1)}">Course ID</a></th>
+                <th scope="col"><a th:href="@{/sort(param1=2)}">Course</a></th>
+                <th scope="col"><a th:href="@{/sort(param1=3)}">Department</a></th>
+                <th scope="col"><a th:href="@{/sort(param1=4)}">Open Spots</a></th>
+                <th scope="col"><a th:href="@{/sort(param1=5)}">Professor</a></th>
+                <th scope="col">Credits</th>
+                <th scope="col">PreRequisite 1</th>
+                <th scope="col">PreRequisite 2</th>
+                <th scope="col">Corequisite</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            <tr th:each="course : ${courses}">
+                <td th:text="${{course.getCourse_ID().getCourse_ID()}}"></td>
+                <td th:text="${course.getCourse_ID().getCourse_title()}"></td>
+                <td th:text="${course.getCourse_ID().getDepartment()}"></td>
+                <td th:text="${course.getOpenSlots()}"></td>
+                <td th:text="${course.getProfessor()}"></td>
+                <td th:text="${course.getCourse_ID().getCredits()}"></td>
+                <td th:text="${course.getCourse_ID().getPrereq1()}"></td>
+                <td th:text="${course.getCourse_ID().getPrereq2()}"></td>
+                <td th:text="${course.getCourse_ID().getCorequisite()}"></td>
+                <td><a th:href="@{'/enroll/' + ${course.getClass_ID()}}" class="buttonb">Enroll</a></td>
+
+            </tr>
+            </tbody>
+        </table>
+    </center>
+</section>
+</div>
+</body>
+</html>
