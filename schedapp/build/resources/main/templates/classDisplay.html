@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{'css/main.css'}">
+</head>
+<body>
+<div class="navbar">
+    <a href="/">Home</a>
+    <a href="/classDisplay">Courses</a>
+</div>
+<h1> </h1>
+<h1> </h1>
+<h1>course display</h1>
+<section id="coursedisplayer">
+    <center>
+        <table th:unless="${courses.size() eq 0}">
+            <thead>
+            <tr>
+                <th scope="col">Course ID</th>
+                <th scope="col">Course</th>
+                <th scope="col">Department</th>
+                <th scope="col">Open Spots</th>
+                <th scope="col">Professor</th>
+                <th scope="col">Credits</th>
+                <th scope="col">PreRequisite 1</th>
+                <th scope="col">PreRequisite 2</th>
+                <th scope="col">Corequisite</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            <tr th:each="course : ${courses}">
+                <td th:text="${{course.getCourse_ID()}}"></td>
+                <td th:text="${course.getCourse_ID().getCourse_title()}"></td>
+                <td th:text="${course.getCourse_ID().getDepartment()}"></td>
+                <td th:text="${course.getOpenSlots()}"></td>
+                <td th:text="${course.getProfessor()}"></td>
+                <td th:text="${course.getCourse_ID().getCredits()}"></td>
+                <td th:text="${course.getCourse_ID().getPrereq1()}"></td>
+                <td th:text="${course.getCourse_ID().getPrereq2()}"></td>
+                <td th:text="${course.getCourse_ID().getCorequisite()}"></td>
+
+            </tr>
+            </tbody>
+        </table>
+    </center>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+/*sources:
+ https://css-tricks.com/complete-guide-table-element/
+ */
+
+.navbar {
+    background-color: #79F9FF;
+    overflow: hidden;
+}
+.navbar a{
+    float: left;
+    color: #000000;
+    text-align: center;
+    font-size: 15px;
+    display: block;
+    padding: 10px;
+}
+.navbar a:hover {
+    background-color: #3DD8DF;
+    color: black;
+
+}
+table {
+    font-family: 'Arial';
+    margin: 17px auto;
+    border-collapse: collapse;
+    border: 1px solid #000000;
+}
+
+td {
+    color: #000000;
+}
+th, td {
+    color: #000000;
+    border: 1px solid #000000;
+    padding: 7px 15px;
+    border-collapse: collapse;
+}
+th {
+    background: #3DD8DF;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+}
