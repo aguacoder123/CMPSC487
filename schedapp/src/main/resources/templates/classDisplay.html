@@ -18,11 +18,11 @@
         <table th:unless="${courses.size() eq 0}">
             <thead>
             <tr>
-                <th scope="col">Course ID</th>
-                <th scope="col">Course</th>
-                <th scope="col">Department</th>
-                <th scope="col">Open Spots</th>
-                <th scope="col">Professor</th>
+                <th scope="col"><a th:href="@{/sort(param1=1)}">Course ID</a></th>
+                <th scope="col"><a th:href="@{/sort(param1=2)}">Course</a></th>
+                <th scope="col"><a th:href="@{/sort(param1=3)}">Department</a></th>
+                <th scope="col"><a th:href="@{/sort(param1=4)}">Open Spots</a></th>
+                <th scope="col"><a th:href="@{/sort(param1=5)}">Professor</a></th>
                 <th scope="col">Credits</th>
                 <th scope="col">PreRequisite 1</th>
                 <th scope="col">PreRequisite 2</th>
