@@ -50,4 +50,7 @@ public class ClassesService {
         classesRepository.removeStudent(user,course);
     }
 
+    // addubg a class to the db
+    // section is manually entered by the admin
+    public classes addClasses(int section, courses courses, String semester, int capacity, String professor, String students);
 }

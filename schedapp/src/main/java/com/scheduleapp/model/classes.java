@@ -75,4 +75,16 @@ public class classes{
     public int getOpenSlots(){
         return capacity-slots_Taken;
     }
+
+
+    // class ID is to be generated automatically
+    public classes(String class_ID, courses courses, String semester, int capacity, int slots_Taken, String professor, String students) {
+        this.class_ID = class_ID;
+        this.courses = courses;
+        this.semester = semester;
+        this.capacity = capacity;
+        this.slots_Taken = slots_Taken;
+        this.professor = professor;
+        this.students = students;
+    }
 }

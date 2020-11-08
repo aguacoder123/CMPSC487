@@ -27,4 +27,12 @@ public class ClassesRepository {
     public void addUser(String user, String course){
         repository.addUser(user,course);
     }
+
+    // edits classes
+    public void editClass(String semester, int capacity, String professor) { repository.editClass(semester, capacity, professor); }
+
+    // adds classes to db
+    // not sure if this needs to be here too
+    public classes addClasses(classes classes) { getClasses().add(classes); return classes; }
+
 }
