@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/CMPSC487.iml" filepath="$PROJECT_DIR$/.idea/CMPSC487.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SchedulerApp.iml" filepath="$PROJECT_DIR$/.idea/modules/SchedulerApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SchedulerApp.main.iml" filepath="$PROJECT_DIR$/.idea/modules/SchedulerApp.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SchedulerApp.test.iml" filepath="$PROJECT_DIR$/.idea/modules/SchedulerApp.test.iml" />
     </modules>
   </component>
 </project>

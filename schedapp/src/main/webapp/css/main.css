@@ -3,12 +3,12 @@
  */
 
 .navbar {
-    background-color: #79F9FF;
+    background-color: #d1925a;
     overflow: hidden;
 }
 .navbar a{
     float: left;
-    color: #000000;
+    color: #d1925a;
     text-align: center;
     font-size: 15px;
     display: block;
@@ -16,7 +16,7 @@
 }
 .navbar a:hover {
     background-color: #3DD8DF;
-    color: black;
+    color: #d1925a;
 
 }
 .searcher{
@@ -59,7 +59,7 @@
     transition-duration: 0.4s;
 }
 .buttona:hover {
-    background-color: #FF0000;
+    background-color: #d1925a;
     color: white;
 }
 .buttonb {
